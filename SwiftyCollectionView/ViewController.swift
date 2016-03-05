@@ -16,7 +16,7 @@ class ViewController: UICollectionViewController {
         
         self.selectedIndexPath = indexPath
         
-        var vc = self.storyboard?.instantiateViewControllerWithIdentifier("secondVC") as? SecondCollectionViewController
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("secondVC") as? SecondCollectionViewController
         self.navigationController?.pushViewController(vc!, animated: true)
     }
     
@@ -40,12 +40,12 @@ class ViewController: UICollectionViewController {
     
     func colorForIndex(index: NSInteger) -> UIColor {
         
-        var itemCount:Int = 17
-        var a = Float(index)
-        var b = Float(itemCount)
-        var val = (a/b) * 0.8
+        let itemCount:Int = 17
+        let a = Float(index)
+        let b = Float(itemCount)
+        let val = (a/b) * 0.8
         
-        var sender:UIColor = UIColor(red: CGFloat(0.25), green: CGFloat(val), blue: CGFloat(0.5), alpha: CGFloat(1.0))
+        let sender:UIColor = UIColor(red: CGFloat(0.25), green: CGFloat(val), blue: CGFloat(0.5), alpha: CGFloat(1.0))
         
         return sender
     }

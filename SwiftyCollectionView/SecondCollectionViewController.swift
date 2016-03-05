@@ -15,14 +15,14 @@ class SecondCollectionViewController: UICollectionViewController {
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
         self.selectedIndexPath = indexPath
-        var vc = self.storyboard?.instantiateViewControllerWithIdentifier("thirdVC") as? ThirdCollectionViewController
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("thirdVC") as? ThirdCollectionViewController
         self.navigationController?.pushViewController(vc!, animated: true)
     }
 
     //MARK :- UICollectionViewDataSource
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        var cell = collectionView.dequeueReusableCellWithReuseIdentifier("cellId", forIndexPath: indexPath) as! SecondViewCollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cellId", forIndexPath: indexPath) as! SecondViewCollectionViewCell
         
         cell.numberLabel.text = "\(indexPath.row + 1)"
 

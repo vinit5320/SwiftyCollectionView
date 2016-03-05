@@ -20,7 +20,7 @@ class ThirdCollectionViewController: UICollectionViewController {
     //MARK :- UICollectionViewDataSource
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        var cell = collectionView.dequeueReusableCellWithReuseIdentifier("cellId", forIndexPath: indexPath) as! ThirdViewCollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cellId", forIndexPath: indexPath) as! ThirdViewCollectionViewCell
         
         cell.numberLabel.text = "\(indexPath.row + 1)"
 
